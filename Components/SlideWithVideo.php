@@ -4,7 +4,7 @@
 namespace Components;
 
 
-class SlideWithVideo extends SlideAbstract
+class SlideWithVideo extends Slide
 {
     private $videoLink;
 
@@ -13,6 +13,13 @@ class SlideWithVideo extends SlideAbstract
         parent::__construct($name, $pathToImage, $description);
 
         $this->videoLink = $videoLink;
-        $this->arrayWithData[] = $videoLink;
+    }
+
+    public function getData(): array
+    {
+        $array = parent::getData();
+        $array[] = $this->videoLink;
+
+        return $array;
     }
 }

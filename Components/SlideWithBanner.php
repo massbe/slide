@@ -4,7 +4,7 @@
 namespace Components;
 
 
-class SlideWithBanner extends SlideAbstract
+class SlideWithBanner extends Slide
 {
     private $bannerPath;
 
@@ -13,6 +13,13 @@ class SlideWithBanner extends SlideAbstract
         parent::__construct($name, $pathToImage, $description);
 
         $this->bannerPath = $bannerPath;
-        $this->arrayWithData[] = $bannerPath;
+    }
+
+    public function getData(): array
+    {
+        $array = parent::getData();
+        $array[] = $this->bannerPath;
+
+        return $array;
     }
 }
