@@ -1,10 +1,7 @@
 <?php
-
-
 namespace Components;
 
-
-class Slide
+class Slide extends SlideAbstract
 {
 
 }

@@ -1,6 +1,6 @@
 {
   "autoload": {
-    "psr0": {
+    "psr-0": {
       "Components\\": ""
     }
   }
