@@ -17,9 +17,6 @@ class SlideWithVideo extends Slide
 
     public function getData(): array
     {
-        $array = parent::getData();
-        $array[] = $this->videoLink;
-
-        return $array;
+        return parent::getData()[] = $this->videoLink;
     }
 }

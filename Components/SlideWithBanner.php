@@ -17,9 +17,6 @@ class SlideWithBanner extends Slide
 
     public function getData(): array
     {
-        $array = parent::getData();
-        $array[] = $this->bannerPath;
-
-        return $array;
+        return parent::getData()[] = $this->bannerPath;
     }
 }
